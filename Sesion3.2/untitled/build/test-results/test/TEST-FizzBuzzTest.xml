@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FizzBuzzTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-10-12T19:50:40" hostname="DESKTOP-BCQ9F1A" time="0.066">
+  <properties/>
+  <testcase name="testFizzBuzzForMultipleOf3And5()" classname="FizzBuzzTest" time="0.051"/>
+  <testcase name="testFizzBuzzForMultipleOf3()" classname="FizzBuzzTest" time="0.002"/>
+  <testcase name="testFizzBuzzForMultipleOf5()" classname="FizzBuzzTest" time="0.001"/>
+  <testcase name="testFizzBuzzForOtherNumbers()" classname="FizzBuzzTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
