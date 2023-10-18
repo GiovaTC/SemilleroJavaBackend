@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agenda</title>
+</head>
+<body>
+<h1>Agenda</h1>
+
+<!-- Mostrar lista de personas -->
+<ul th:if="${not #lists.isEmpty(personas)}">
+    <li th:each="persona : ${personas}" th:text="${persona.nombre + ' - ' + #strings.replace(persona.telefono, '-', ' ')}"></li>
+</ul>
+
+<!-- Mostrar mensajes de error -->
+<div th:if="${#fields.hasErrors('nuevaPersona')}">
+    <p th:each="error : ${#fields.errors('nuevaPersona')}" th:text="${error}"></p>
+</div>
+
+<!-- Formulario para agregar nueva persona -->
+<form th:action="@{/agenda/guardar}" th:object="${nuevaPersona}" method="post">
+    <label>Nombre: <input type="text" th:field="*{nombre}" /></label>
+    <label>Teléfono: <input type="text" th:field="*{telefono}" /></label>
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>
